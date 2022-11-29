@@ -25,6 +25,12 @@ def test():
 @app.route('/about/')
 def about():
     return render_template('about.html')
+    input_path = 'car.jpg'
+    output_path = 'outdfsfdsput.png'
+ 
+    input = Image.open(input_path)
+    output = remove(input)
+    output.save(output_path)
    
 @app.route('/hello', methods=['POST'])
 def hello():
