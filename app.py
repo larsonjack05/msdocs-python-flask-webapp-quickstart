@@ -21,8 +21,10 @@ def favicon():
 def test():
    return "<h1>Got It!</h1>"
 
-  
- 
+@app.route('/about/')
+def about():
+    return render_template('about.html')
+   
 @app.route('/hello', methods=['POST'])
 def hello():
    name = request.form.get('name')
